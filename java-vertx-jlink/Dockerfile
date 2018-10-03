@@ -1,5 +1,9 @@
 FROM alpine:3.8 as jdk
+<<<<<<< HEAD
 RUN mkdir /opt && wget -qO- https://download.java.net/java/early_access/alpine/28/binaries/openjdk-11+28_linux-x64-musl_bin.tar.gz | tar xz -C /opt
+=======
+RUN mkdir /opt && wget -qO- https://download.java.net/java/early_access/alpine/27/binaries/openjdk-11+27_linux-x64-musl_bin.tar.gz | tar xz -C /opt
+>>>>>>> upstream/master
 RUN /opt/jdk-11/bin/jlink \
     --module-path /opt/jdk-11/jmods \
     --verbose \
